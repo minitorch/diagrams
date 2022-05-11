@@ -1,5 +1,7 @@
 from base import *
 
+HEIGHT = 200
+
 def ta(text):
     return t(text, 0.3)
 
@@ -11,13 +13,13 @@ def matrix(n, r, c):
 
 
 d = t("matrix", 1) / v /  matrix("m", 2, 5).center_xy()
-d.render_svg("diagrams/Tensors/matrix.svg", 40)
+d.render_svg("diagrams/Tensors/matrix.svg", HEIGHT)
 
 d = matrix("m", 2, 5)
-d.render_svg("diagrams/Tensors/matrix1.svg", 40)
+d.render_svg("diagrams/Tensors/matrix1.svg", HEIGHT)
 
 d = matrix("m", 5, 2)
-d.render_svg("diagrams/Tensors/matrix2.svg", 40)
+d.render_svg("diagrams/Tensors/matrix2.svg", HEIGHT)
 
 
 # 
@@ -35,7 +37,7 @@ d = base + (concat([connect(base, ("x", 0, 0), ("s", 0, 0)),
 ])).dashing([0.1, 0.1], 0).line_width(0.1)
 
 pathsvg = "diagrams/Tensors/stride1.svg"
-d.render_svg(pathsvg, 200)
+d.render_svg(pathsvg, HEIGHT)
 
 d = base + (concat([connect(base, ("x", 0, 0), ("s", 0, 0)),
                     connect(base, ("x", 1, 0), ("s", 0, 1)),
@@ -44,4 +46,4 @@ d = base + (concat([connect(base, ("x", 0, 0), ("s", 0, 0)),
 ])).dashing([0.1, 0.1], 0).line_width(0.1)
 
 pathsvg = "diagrams/Tensors/stride2.svg"
-d.render_svg(pathsvg, 200)
+d.render_svg(pathsvg, HEIGHT)
