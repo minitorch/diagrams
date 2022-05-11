@@ -21,6 +21,13 @@ def t(te, s=1):
 def tile(d, m, n, name = ""):
     return hcat(vcat(d.named((name, j, i)) for j in range(n)) for i in range(m)).center_xy()
 
+
+def connect_all(d, names):
+    return concat([
+        connect(d, a, b)
+        for a, b in names])
+    
+
 # Define spacing
 
 def hstrut(width=0.2): return hrule(width).line_width(0)
