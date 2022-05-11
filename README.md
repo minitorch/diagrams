@@ -6,14 +6,6 @@ figs/Autograd/chain1.png
 ![](original/figs/Autograd/chain1.png)
 ![](diagrams/Autograd/chain1.svg)
 
-figs/Autograd/fondo.png
-![](original/figs/Autograd/fondo.png)
-![](diagrams/Autograd/fondo.svg)
-
-figs/Autograd/autograd1@2x.png
-![](original/figs/Autograd/autograd1@2x.png)
-![](diagrams/Autograd/autograd1@2x.svg)
-
 figs/Autograd/autograd2.png
 ![](original/figs/Autograd/autograd2.png)
 ![](diagrams/Autograd/autograd2.svg)
@@ -34,10 +26,6 @@ figs/Autograd/backprop5.png
 ![](original/figs/Autograd/backprop5.png)
 ![](diagrams/Autograd/backprop5.svg)
 
-figs/Autograd/autograd5@2x.png
-![](original/figs/Autograd/autograd5@2x.png)
-![](diagrams/Autograd/autograd5@2x.svg)
-
 figs/Autograd/autograd3.png
 ![](original/figs/Autograd/autograd3.png)
 ![](diagrams/Autograd/autograd3.svg)
@@ -45,10 +33,6 @@ figs/Autograd/autograd3.png
 figs/Autograd/backprop4.png
 ![](original/figs/Autograd/backprop4.png)
 ![](diagrams/Autograd/backprop4.svg)
-
-figs/Autograd/chain2@2x.png
-![](original/figs/Autograd/chain2@2x.png)
-![](diagrams/Autograd/chain2@2x.svg)
 
 figs/Autograd/chain3.png
 ![](original/figs/Autograd/chain3.png)
@@ -69,10 +53,6 @@ figs/Autograd/autograd5.png
 figs/Autograd/backprop3.png
 ![](original/figs/Autograd/backprop3.png)
 ![](diagrams/Autograd/backprop3.svg)
-
-figs/Autograd/autograd2@2x.png
-![](original/figs/Autograd/autograd2@2x.png)
-![](diagrams/Autograd/autograd2@2x.svg)
 
 figs/Autograd/backprop2.png
 ![](original/figs/Autograd/backprop2.png)
