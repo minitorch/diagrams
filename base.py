@@ -1,6 +1,6 @@
 from colour import Color
-from diagrams import *
-from diagrams.bounding_box import BoundingBox
+from chalk import *
+from chalk.bounding_box import BoundingBox
 
 # Library 
 
@@ -70,4 +70,13 @@ def cover(d, a, b):
     new_bb = BoundingBox(b1.tl, b2.br)
     return rectangle(new_bb.width, new_bb.height, 0.0) \
             .translate(new_bb.center.x, new_bb.center.y)
+
+
+# Matrix
+
+def cell():
+    return rectangle(1, 1).line_width(0.05)
+
+def matrix(n, r, c):
+    return tile(cell(), c, r, n)
 
