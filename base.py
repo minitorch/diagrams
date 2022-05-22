@@ -10,7 +10,7 @@ blue = Color("#005FDB")
 olive = Color("#708238")
 black = Color("#000000")
 white = Color("#ffffff")
-grey = Color("#bbbbbb")
+grey = Color("#dddddd")
 
 # Text
 def t(te, s=1):
@@ -80,3 +80,22 @@ def cell():
 def matrix(n, r, c):
     return tile(cell(), c, r, n)
 
+def render(locals, name, height):
+    loc = list(locals.keys())
+    for l in loc:
+        if l.startswith("image_"):
+            d = locals[l]()
+            if isinstance(d, list):
+                for j, d2 in enumerate(d, 1):
+                    print("Rendering " + l)
+                    d2.render_svg("diagrams/" + name+ "/"+l.split("_")[-1]+str(j)+".svg", height)
+            else:
+                print("Rendering " + l)
+                d.render_svg("diagrams/"+ name + "/"+l.split("_")[-1]+".svg", height)
+
+    
+def function(f, l=-1., r=1.):
+    x = [l + (r - l) * i / 100 for i in range(100)]    
+    xy = [(i, -f(i)) for i in x]
+    q = make_path(xy).line_width(0.05)
+    return q

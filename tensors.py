@@ -6,41 +6,6 @@ HEIGHT = 200
 def ta(text):
     return t(text, 0.3)
 
-
-
-d = t("matrix", 1) / v /  matrix("m", 2, 5).center_xy()
-d.render_svg("diagrams/Tensors/matrix.svg", HEIGHT)
-
-d = matrix("m", 2, 5)
-d.render_svg("diagrams/Tensors/matrix1.svg", HEIGHT)
-
-d = matrix("m", 5, 2)
-d.render_svg("diagrams/Tensors/matrix2.svg", HEIGHT)
-
-# Strid1
-m = matrix("x", 5, 2)
-s = matrix("s", 1, 10).fill_color(papaya)
-base = t("tensor") / v / m / v / s / t("storage")
- 
-d = base + connect_all(base, [(("x", 0, 0), ("s", 0, 0)),
-                        (("x", 0, 1), ("s", 0, 1)),
-                        (("x", 1, 0 ), ("s", 0, 2)),
-                        (("x", 4, 1 ), ("s", 0, 9))]).dashing([0.1, 0.1], 0).line_width(0.1)
-
-d.render_svg("diagrams/Tensors/stride1.svg", HEIGHT)
-
-
-
-d = base + connect_all(base, [(("x", 0, 0), ("s", 0, 0)),
-                        (("x", 1, 0), ("s", 0, 1)),
-                        (("x", 0, 1), ("s", 0, 2)),
-                        (("x", 4, 1), ("s", 0, 9))]).dashing([0.1, 0.1], 0).line_width(0.1)
-pathsvg = "diagrams/Tensors/stride2.svg"
-d.render_svg(pathsvg, HEIGHT)
-
-
-
-
 def tensor(skew, depth, rows, columns, name=""):
     s = Vector(0, 0)
     up = Vector(0, -1)
@@ -58,11 +23,38 @@ def tensor(skew, depth, rows, columns, name=""):
                     for j in reversed(range(rows))
                     for k in range(columns)]))
 
-pathsvg = "diagrams/Tensors/test.svg"
-m = tensor(0.6, 5, 8, 3) | h | tensor(0.6, 5, 8, 3, "b")
-m += connect(m, ("", 0, 0, 0), ("b", 1, 2, 2)).line_width(0.1)
-m.render_svg(pathsvg, HEIGHT)
-# (v / (h | m | h)).render_svg(pathsvg, HEIGHT)
+
+def image_matrix1():
+    return t("matrix", 1) / v /  matrix("m", 2, 5).center_xy()
+
+def image_matrix1():
+    return matrix("m", 2, 5)
+
+def image_matrix2():
+     return matrix("m", 5, 2)
+
+# Strid1
+def image_stride1():
+    m = matrix("x", 5, 2)
+    s = matrix("s", 1, 10).fill_color(papaya)
+    base = t("tensor") / v / m / v / s / t("storage")
+
+    d = base + connect_all(base, [(("x", 0, 0), ("s", 0, 0)),
+                                  (("x", 0, 1), ("s", 0, 1)),
+                                  (("x", 1, 0 ), ("s", 0, 2)),
+                                  (("x", 4, 1 ), ("s", 0, 9))]).dashing([0.1, 0.1], 0).line_width(0.1)
+    
+
+
+
+
+    d2 = base + connect_all(base, [(("x", 0, 0), ("s", 0, 0)),
+                                  (("x", 1, 0), ("s", 0, 1)),
+                                  (("x", 0, 1), ("s", 0, 2)),
+                                  (("x", 4, 1), ("s", 0, 9))]).dashing([0.1, 0.1], 0).line_width(0.1)
+    
+    return [d1, d2]
+
 
 
 

@@ -194,49 +194,26 @@ figs/Conv/conv@3x.png
 ![](original/figs/Conv/conv@3x.png)
 ![](diagrams/Conv/conv@3x.svg)
 
+## GPU
+
+
 figs/gpu/blockid.png
 ![](original/figs/gpu/blockid.png)
 ![](diagrams/gpu/blockid.svg)
-
-figs/gpu/local mem@3x.png
-![](original/figs/gpu/local mem@3x.png)
-![](diagrams/gpu/local mem@3x.svg)
-
-figs/gpu/block1d@3x.png
-![](original/figs/gpu/block1d@3x.png)
-![](diagrams/gpu/block1d@3x.svg)
-
-figs/gpu/fondo.png
-![](original/figs/gpu/fondo.png)
-![](diagrams/gpu/fondo.svg)
 
 figs/gpu/thread.png
 ![](original/figs/gpu/thread.png)
 ![](diagrams/gpu/thread.svg)
 
-figs/gpu/blockid@3x.png
-![](original/figs/gpu/blockid@3x.png)
-![](diagrams/gpu/blockid@3x.svg)
 
 figs/gpu/block.png
 ![](original/figs/gpu/block.png)
 ![](diagrams/gpu/block.svg)
 
-figs/gpu/sharedmem@3x.png
-![](original/figs/gpu/sharedmem@3x.png)
-![](diagrams/gpu/sharedmem@3x.svg)
-
 figs/gpu/sharedmem.png
 ![](original/figs/gpu/sharedmem.png)
 ![](diagrams/gpu/sharedmem.svg)
 
-figs/gpu/map@3x.png
-![](original/figs/gpu/map@3x.png)
-![](diagrams/gpu/map@3x.svg)
-
-figs/gpu/threadid@3x.png
-![](original/figs/gpu/threadid@3x.png)
-![](diagrams/gpu/threadid@3x.svg)
 
 figs/gpu/block1d.png
 ![](original/figs/gpu/block1d.png)
@@ -270,6 +247,8 @@ figs/gpu/threadid.png
 ![](original/figs/gpu/threadid.png)
 ![](diagrams/gpu/threadid.svg)
 
+## Grad
+
 figs/Grad/tangent.png
 ![](original/figs/Grad/tangent.png)
 ![](diagrams/Grad/tangent.svg)
@@ -286,13 +265,8 @@ figs/Grad/approx.png
 ![](original/figs/Grad/approx.png)
 ![](diagrams/Grad/approx.svg)
 
-figs/Graphs/pt2@3x.png
-![](original/figs/Graphs/pt2@3x.png)
-![](diagrams/Graphs/pt2@3x.svg)
+## Graphs
 
-figs/Graphs/relu@3x.png
-![](original/figs/Graphs/relu@3x.png)
-![](diagrams/Graphs/relu@3x.svg)
 
 figs/Graphs/relu.png
 ![](original/figs/Graphs/relu.png)
@@ -302,13 +276,6 @@ figs/Graphs/pt3.png
 ![](original/figs/Graphs/pt3.png)
 ![](diagrams/Graphs/pt3.svg)
 
-figs/Graphs/data@3x.png
-![](original/figs/Graphs/data@3x.png)
-![](diagrams/Graphs/data@3x.svg)
-
-figs/Graphs/fondo.png
-![](original/figs/Graphs/fondo.png)
-![](diagrams/Graphs/fondo.svg)
 
 figs/Graphs/split1.png
 ![](original/figs/Graphs/split1.png)
@@ -318,9 +285,6 @@ figs/Graphs/data5.png
 ![](original/figs/Graphs/data5.png)
 ![](diagrams/Graphs/data5.svg)
 
-figs/Graphs/relu2@3x.png
-![](original/figs/Graphs/relu2@3x.png)
-![](diagrams/Graphs/relu2@3x.svg)
 
 figs/Graphs/weight.png
 ![](original/figs/Graphs/weight.png)
