@@ -1,6 +1,7 @@
 from colour import Color
 from chalk import *
 from chalk.bounding_box import BoundingBox
+from chalk.trail import *
 
 # Library 
 
@@ -15,6 +16,27 @@ grey = Color("#dddddd")
 # Text
 def t(te, s=1):
     return text(te, s).fill_color(black).line_color(white)
+
+unit_x = Vector(1, 0)
+unit_y = Vector(0, 1)
+
+def quad(f, tl, s, c1, c2):
+    v =  [f(tl.x + d1 * s, tl.y + d2 * s)
+          for d1 in range(2) for d2 in range(2)]
+    if (v[0] == v[1] and v[1] == v[2] and v[2] == v[3]) or s < 0.005:
+        c = c1 if v[0] == 1 else c2
+        r = rectangle(s, s).translate(s / 2, s /2).line_width(0.001).line_color(c).fill_color(c).line_opacity(0.5).fill_opacity(0.5)
+        return r
+    else:
+        s /= 2
+        return ((quad(f, tl, s, c1, c2) | quad(f, tl + s * unit_x, s,  c1, c2)) /
+               (quad(f, tl + s * unit_y, s,  c1, c2) | quad(f, tl + s * (unit_y + unit_x), s,  c1, c2)))
+
+
+def contour(f, R, C):
+    return vcat((hcat((rectangle(1, 1).line_width(0).line_color(c).fill_color(c) 
+                     for j in range(C) for c in [f(i/ C, j / C)]))
+                 for i in range(R)))
 
 
 # Tiling 
